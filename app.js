@@ -108,19 +108,19 @@ function startHtml() {
 
 function generateHtml(member) {
     return new Promise(function(resolve, reject) {
-        const findName = member.getName();
-        const findRole = member.getRole();
-        const findId = member.getId();
-        const findEmail = member.getEmail();
+        const Name = member.getName();
+        const Role = member.getRole();
+        const Id = member.getId();
+        const Email = member.getEmail();
         let info = "";
         if (role === "Engineer") {
             const gitHub = member.getGithub();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${findName}<br /><br />Engineer</h5>
+            <h5 class="card-header">${name}<br /><br />Engineer</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${findId}</li>
-                <li class="list-group-item">Email Address: ${findEmail}</li>
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">GitHub: ${gitHub}</li>
             </ul>
             </div>
@@ -129,10 +129,10 @@ function generateHtml(member) {
             const school = member.getSchool();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${findName}<br /><br />Intern</h5>
+            <h5 class="card-header">${name}<br /><br />Intern</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${findId}</li>
-                <li class="list-group-item">Email Address: ${findEmail}</li>
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">School: ${school}</li>
             </ul>
             </div>
@@ -141,10 +141,10 @@ function generateHtml(member) {
             const officeNumber = member.getOfficeNumber();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
-            <h5 class="card-header">${findName}<br /><br />Manager</h5>
+            <h5 class="card-header">${name}<br /><br />Manager</h5>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ID: ${findId}</li>
-                <li class="list-group-item">Email Address: ${findEmail}</li>
+                <li class="list-group-item">ID: ${id}</li>
+                <li class="list-group-item">Email Address: ${email}</li>
                 <li class="list-group-item">Office Phone: ${officeNumber}</li>
             </ul>
             </div>
