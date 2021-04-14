@@ -5,10 +5,10 @@ class Intern extends Employee{
         super (name, id, email);
         this.school=school;
     }
-    findPosition(){
+    getPosition(){
         return "Intern";
     }
-    findSchool(){
+    getSchool(){
         return this.school;
     }
 }

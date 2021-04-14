@@ -5,10 +5,10 @@ class Manager extends Employee{
         super (name, id, email);
         this.officeNumber=officeNumber;
     }
-    findPosition(){
+    getPosition(){
         return "Manager";
     }
-    findOfficeNumber(){
+    getOfficeNumber(){
         return this.officeNumber;
     }
 }

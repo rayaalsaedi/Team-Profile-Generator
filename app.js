@@ -110,7 +110,7 @@ function beginHtml() {
 function generateHtml(member) {
     return new Promise(function(resolve, reject) {
         const name = member.getName();
-        const role = member.getRole();
+        const position = member.getPosition();
         const id = member.getId();
         const email = member.getEmail();
         let info = "";

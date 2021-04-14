@@ -5,16 +5,16 @@ constructor (name, id, email){
     this.email=email;
 
 }
-generateName(){
+getName(){
     return this.name
 };
-generateId(){
+getId(){
     return this.id
 };
-generateEmail(){
+getEmail(){
     return this.email
 };
-findPosition(){
+getPosition(){
     return "Employee"
 };
 
