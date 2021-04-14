@@ -4,8 +4,8 @@ Node.js command-line application that takes in information about employees and g
 # Technologies used:
 - HTML
 - Node.js
--Javascript
--Bootstrap
+- Javascript
+- Bootstrap
 
 # Screenshot:
 
