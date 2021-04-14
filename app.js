@@ -5,39 +5,38 @@ const Intern=require("./js/intern");
 const Manager=require("./js/manager");
 
 const employee=[];
+
 function startApp(){
     generateHtml();
     addEmployees();
 }
 function addEmployees(){
     inquirer.prompt([{
-
-    }])
-}
-function addMember() {
-    inquirer.prompt([{
-        message: "Enter the members name",
+        message: "Enter the  name",
         name: "name"
+    
+
+        
     },
     {
         type: "list",
-        message: "Select their role",
+        message: "Enter their position",
         choices: [
             "Engineer",
             "Intern",
             "Manager"
         ],
-        name: "role"
+        name: "position"
     },
     {
-        message: "Enter the member id",
+        message: "Enter their id",
         name: "id"
     },
     {
-        message: "Enter the member email address",
+        message: "Enter their email address",
         name: "email"
     }])
-    .then(function({name, role, id, email}) {
+    .then(function({name, position, id, email}) {
         let positionDets = "";
         if (role === "Engineer") {
             positionDets = "GitHub username";
