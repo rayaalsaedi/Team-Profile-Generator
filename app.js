@@ -38,9 +38,9 @@ function addEmployees(){
     }])
     .then(function({name, position, id, email}) {
         let positionDets = "";
-        if (role === "Engineer") {
+        if (position === "Engineer") {
             positionDets = "GitHub username";
-        } else if (role === "Intern") {
+        } else if (position === "Intern") {
             positionDets = "school name";
         } else {
             positionDets = "office number";
@@ -60,14 +60,14 @@ function addEmployees(){
         }])
         .then(function({positionDets, addMore}) {
             let addMember;
-            if (role === "Engineer") {
+            if (position === "Engineer") {
                 addMember = new Engineer(name, id, email, positionDets);
-            } else if (role === "Intern") {
+            } else if (position === "Intern") {
                 addMember = new Intern(name, id, email, positionDets);
             } else {
                 addMember = new Manager(name, id, email, positionDets);
             }
-            employees.push(addMember);
+            employee.push(addMember);
             generateHtml(addMember)
             .then(function() {
                 if (addMore === "yes") {
@@ -103,7 +103,7 @@ function beginHtml() {
             console.log(err);
         }
     });
-    console.log("start");
+    console.log("begin");
 }
 
 function generateHtml(member) {
@@ -113,7 +113,7 @@ function generateHtml(member) {
         const id = member.getId();
         const email = member.getEmail();
         let info = "";
-        if (role === "Engineer") {
+        if (position === "Engineer") {
             const gitHub = member.getGithub();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
@@ -125,7 +125,7 @@ function generateHtml(member) {
             </ul>
             </div>
         </div>`;
-        } else if (role === "Intern") {
+        } else if (position === "Intern") {
             const school = member.getSchool();
             data = `<div class="col-6">
             <div class="card mx-auto mb-3" style="width: 18rem">
