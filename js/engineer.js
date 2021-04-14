@@ -4,10 +4,10 @@ class Engineer extends Employee{
     constructor (name, id, email){
         this.github=github;
     }
-    generateGithub(){
+   getGithub(){
         return this.github;
     }
-    findPosition(){
+    getPosition(){
         return "Engineer";
     }
 }
