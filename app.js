@@ -13,7 +13,8 @@ function addEmployees(){
     inquirer.prompt([{
 
     }])
-}function addMember() {
+}
+function addMember() {
     inquirer.prompt([{
         message: "Enter the members name",
         name: "name"
@@ -68,12 +69,12 @@ function addEmployees(){
                 addMember = new Manager(name, id, email, positionDets);
             }
             employees.push(addMember);
-            addHtml(addMember)
+            generateHtml(addMember)
             .then(function() {
                 if (addMore === "yes") {
                     addMember();
                 } else {
-                    finishHtml();
+                    completeHtml();
                 }
             });
             
@@ -82,7 +83,7 @@ function addEmployees(){
 }
 
 
-function startHtml() {
+function beginHtml() {
     const html = `<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -108,10 +109,10 @@ function startHtml() {
 
 function generateHtml(member) {
     return new Promise(function(resolve, reject) {
-        const Name = member.getName();
-        const Role = member.getRole();
-        const Id = member.getId();
-        const Email = member.getEmail();
+        const name = member.getName();
+        const role = member.getRole();
+        const id = member.getId();
+        const email = member.getEmail();
         let info = "";
         if (role === "Engineer") {
             const gitHub = member.getGithub();
