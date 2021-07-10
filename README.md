@@ -8,4 +8,6 @@ Node.js command-line application that takes in information about employees and g
 - Bootstrap
 
 # Screenshot:
+Preview of the app:
 
+![Screenshot](assets/demo.gif)
